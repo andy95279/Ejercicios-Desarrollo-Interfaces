@@ -1,0 +1,18 @@
+int sumArray(List<int>? numbers) {
+  // Verificamos si la lista es nula o tiene 2 elementos o menos.
+  // En ese caso, no podemos eliminar el mayor y el menor, así que devolvemos 0.
+  if (numbers == null || numbers.length <= 2) return 0;
+
+  // Calculamos la suma total de todos los elementos.
+  int total = numbers.reduce((a, b) => a + b);
+
+  // Buscamos el número más alto.
+  int maxNum = numbers.reduce((a, b) => a > b ? a : b);
+
+  // Buscamos el número más bajo.
+  int minNum = numbers.reduce((a, b) => a < b ? a : b);
+
+  // Restamos el valor más alto y el más bajo de la suma total.
+  // Esto nos deja con la suma de todos los demás números.
+  return total - maxNum - minNum;
+}
