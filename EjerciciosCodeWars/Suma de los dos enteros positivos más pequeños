@@ -1,0 +1,8 @@
+int sumTwoSmallestNumbers(List<int> nums) {
+
+  // Ordenamos el array de menor a mayor usando sort
+  nums.sort(); // Ahora el primer elemento es el más pequeño y el segundo es el siguiente más pequeño
+
+  // Devolvemos la suma de los dos primeros elementos (los dos más pequeños)
+  return nums[0] + nums[1];
+}
