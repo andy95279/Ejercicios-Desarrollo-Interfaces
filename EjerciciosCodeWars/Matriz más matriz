@@ -1,0 +1,17 @@
+int arrayPlusArray(List<int> arr1, List<int> arr2) {
+ // Inicializamos una variable para almacenar la suma total.
+  int sumaTotal = 0;
+
+  // Sumamos todos los elementos del primer array.
+  for (int i = 0; i < arr1.length; i++) {
+    sumaTotal += arr1[i]; // sumaTotal = sumaTotal + arr1[i]
+  }
+
+  // Sumamos todos los elementos del segundo array.
+  for (int i = 0; i < arr2.length; i++) {
+    sumaTotal += arr2[i]; // sumaTotal = sumaTotal + arr2[i]
+  }
+
+  // Devolvemos la suma total de ambos arrays.
+  return sumaTotal;
+}
