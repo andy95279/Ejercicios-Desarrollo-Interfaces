@@ -1,0 +1,28 @@
+String isSortedAndHow(List<int> arr){
+  // Inicializa la bandera que asume que el arreglo está en orden ascendente.
+  bool ascendente = true;
+  // Inicializa la bandera que asume que el arreglo está en orden descendente.
+  bool descendente = true;
+
+  // Recorre el arreglo desde el segundo elemento hasta el final.
+  for (int i = 1; i < arr.length; i++) {
+    // Si encontramos un caso donde el elemento actual es menor que el anterior,
+    // entonces ya no puede ser estrictamente ascendente (considerando que
+    // "ascendente" aquí permite duplicados consecutivos).
+    if (arr[i] < arr[i - 1]) ascendente = false;
+    // Si encontramos un caso donde el elemento actual es mayor que el anterior,
+    // entonces ya no puede ser estrictamente descendente.
+    if (arr[i] > arr[i - 1]) descendente = false;
+    // Si ambas banderas son falsas, podemos terminar el bucle temprano porque
+    // ya sabemos que no está ordenado ni ascendente ni descendente.
+    if (!ascendente && !descendente) break;
+  }
+
+  // Si quedó la bandera ascendente en true, devolvemos el string requerido.
+  if (ascendente) return "yes, ascending";
+  // Si quedó la bandera descendente en true, devolvemos el string requerido.
+  if (descendente) return "yes, descending";
+  // Si ninguna bandera quedó en true, no está ordenado en ninguno de los sentidos.
+  return "no";
+
+}
