@@ -1,0 +1,13 @@
+bool betterThanAverage(List<int> classPoints, int yourPoints) {
+  int suma = 0;
+  for (int i = 0; i < classPoints.length; i++) {
+    suma += classPoints[i]; // Añadimos cada puntuación a la suma total.
+  }
+
+  // Calculamos la media dividiendo la suma total entre el número de compañeros.
+  double media = suma / classPoints.length;
+
+  // Comparamos tu puntuación con la media de la clase.
+  // Si tu puntuación es mayor que la media, devuelve true; de lo contrario, false.
+  return yourPoints > media;
+}
