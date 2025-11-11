@@ -1,0 +1,7 @@
+String noSpace(String x) {
+    // Usamos replaceAll para reemplazar cada espacio ' ' con una cadena vacía ''
+   String resultado = x.replaceAll(' ', '');
+
+  // Devolvemos la cadena sin espacios
+  return resultado;
+}
