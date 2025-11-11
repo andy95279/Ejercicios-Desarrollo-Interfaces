@@ -1,0 +1,20 @@
+String reverseWords(String str) {
+    // Dividimos la cadena en palabras
+  List<String> palabras = str.split(' ');
+
+  // Invertimos la lista de palabras
+  List<String> palabrasInvertidas = palabras.reversed.toList();
+
+  // Inicializamos una cadena vacía para ir acumulando las palabras
+  String resultado = '';
+
+  // Recorremos cada palabra invertida
+  for (int i = 0; i < palabrasInvertidas.length; i++) {
+    resultado += palabrasInvertidas[i]; // añadimos la palabra
+    // Si no es la última palabra, agregamos un espacio
+    if (i != palabrasInvertidas.length - 1) {
+      resultado += ' ';
+    }
+  }
+  return resultado;
+}
