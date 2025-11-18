@@ -1,0 +1,10 @@
+bool solution(String text, String ending) {
+  bool contiene = false;
+  if(text.endsWith(ending)){
+    contiene = true;
+  }else{
+    contiene = false;
+  }
+  
+  return contiene;
+}
